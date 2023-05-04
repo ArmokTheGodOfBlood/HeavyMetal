@@ -47,8 +47,31 @@ namespace HeavyMetal.Code.Pages.LogInPage
 
         private string _password = LogInPageModel.password;
         private string _username = LogInPageModel.username;
-        public string Username => _username;
-        public string Password => _password;
+        public string Username
+        {
+            get
+            {
+                return _username;
+            }
+            set
+            {
+                LogInPageModel.username = value;
+                _username = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return _password;
+            }
+            set
+            {
+                LogInPageModel.password = value;
+                _password = value;
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

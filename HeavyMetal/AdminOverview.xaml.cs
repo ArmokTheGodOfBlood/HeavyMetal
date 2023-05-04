@@ -23,10 +23,22 @@ namespace HeavyMetal
     /// </summary>
     public sealed partial class AdminOverview : Page
     {
+        public static AdminOverview instance;
         public AdminOverview()
         {
             this.InitializeComponent();
-            frame.Content = new UsersTable();
+            frame.Navigate(typeof(UsersTable));
+            instance = this;
+        }
+
+        private void Users_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(UsersTable));
+        }
+
+        private void WS_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(WorkshopsTable));
         }
     }
 }

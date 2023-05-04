@@ -20,7 +20,7 @@ namespace HeavyMetal.Code.Pages.LogInPage
             switch (access)
             {
                 case 1:
-                    MainPage.NavHelper(new AdminOverview());
+                    MainPage.NavHelper(typeof(AdminOverview), 0);
                     break;
                 default:
                     ErrorDialog error = new ErrorDialog();

@@ -15,12 +15,17 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel>
-            <Button>
+            <Button Click="Users_Click">
                 <IconSourceElement>
                     <SymbolIconSource Symbol="OtherUser" />
                 </IconSourceElement>
             </Button>
+            <Button Click="WS_Click">
+                <IconSourceElement>
+                    <SymbolIconSource Symbol="List" />
+                </IconSourceElement>
+            </Button>
         </StackPanel>
-        <Frame x:Name="frame" />
+        <Frame x:Name="frame" Grid.Column="1" />
     </Grid>
 </Page>

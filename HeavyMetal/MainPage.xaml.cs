@@ -31,9 +31,13 @@ namespace HeavyMetal
             frame.Content = new SignInPage();
             instance = this;
         }
-        public static void NavHelper(Page page)
+        public static void NavHelper(Type type, int args)
         {
-            instance.frame.Content = page;        
+            instance.frame.Navigate(type, args);      
+        }
+        public static void NavBackHelper()
+        {
+            instance.frame.GoBack();
         }
     }
 }

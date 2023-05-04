@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="HeavyMetal.OtherPages.PublicUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:HeavyMetal.OtherPages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+            <Button Click="Close_Click">
+                <IconSourceElement>
+                    <SymbolIconSource Symbol="Cancel" />
+                </IconSourceElement>
+            </Button>
+            <Button Click="Prev_Click">
+                <IconSourceElement>
+                    <SymbolIconSource Symbol="Previous" />
+                </IconSourceElement>
+            </Button>
+            <Button Click="Next_Click">
+                <IconSourceElement>
+                    <SymbolIconSource Symbol="Next" />
+                </IconSourceElement>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBox
+                Name="Login"
+                Width="200"
+                Margin="25"
+                HorizontalAlignment="Left"
+                PlaceholderText="Login" />
+            <TextBox
+                Name="Name"
+                Width="200"
+                Margin="25"
+                HorizontalAlignment="Left"
+                PlaceholderText="Name" />
+            <TextBox
+                Name="Secondname"
+                Width="200"
+                Margin="25"
+                HorizontalAlignment="Left"
+                PlaceholderText="Secondname" />
+            <TextBox
+                Name="Surename"
+                Width="200"
+                Margin="25"
+                HorizontalAlignment="Left"
+                PlaceholderText="Surename" />
+            <TextBox
+                Name="Role"
+                Width="200"
+                Margin="25"
+                HorizontalAlignment="Left"
+                PlaceholderText="Role" />
+            <Button
+                Margin="25"
+                Click="Apply_Click"
+                Content="Apply Changes" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <ScrollViewer
+                Height="200"
+                BorderBrush="Black"
+                BorderThickness="2">
+                <StackPanel Name="Roles" />
+            </ScrollViewer>
+            <ScrollViewer
+                Height="200"
+                BorderBrush="Black"
+                BorderThickness="2">
+                <StackPanel Name="Shops" />
+            </ScrollViewer>
+            <ScrollViewer
+                Height="200"
+                BorderBrush="Black"
+                BorderThickness="2">
+                <StackPanel Name="Checks" />
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
